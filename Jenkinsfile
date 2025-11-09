@@ -26,14 +26,14 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 // Initializes Terraform and downloads the proxmox provider
-                sh 'terraform init'
+                bat 'terraform init'
             }
         }
 
         stage('Terraform Plan') {
             steps {
                 // Creates an execution plan
-                sh 'terraform plan -out=tfplan'
+                bat 'terraform plan -out=tfplan'
             }
         }
 
@@ -46,7 +46,7 @@ pipeline {
                 }
                 
                 // If approved, applies the plan to build the VM
-                sh 'terraform apply -auto-approve tfplan'
+                bat 'terraform apply -auto-approve tfplan'
             }
         }
     }
