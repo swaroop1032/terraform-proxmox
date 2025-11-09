@@ -26,7 +26,7 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 // Initializes Terraform and downloads the proxmox provider
-                bat 'terraform init'
+                bat 'terraform init -upgrade'
             }
         }
 
