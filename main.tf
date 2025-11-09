@@ -35,6 +35,7 @@ resource "proxmox_vm_qemu" "vm_from_jenkins" {
 
   # --- Network ---
   network {
+    id     = 0
     model  = "virtio"
     bridge = "vmbr0" # Your primary Proxmox bridge
   }
