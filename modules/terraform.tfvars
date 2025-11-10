@@ -1,5 +1,0 @@
-pm_api_url = "https://192.168.31.180:8006/api2/json"
-pm_api_token_id = "terraform@pam!tf-token"
-pm_api_token_secret = "2c8bb918-5c52-4973-a247-1f38d5ef1cdd"
-vm_name = "my-test-vm"
-clone_template = "debian-12-cloudinit-template"
